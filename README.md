@@ -38,9 +38,9 @@ Follow these steps to set up and run the project locally.
     node server.js
   The server will start running on http://localhost:3000.
 
-##API Endpoints
+**API Endpoints**
 
-###1. POST /complaint
+**1. POST /complaint**
 This endpoint registers a new complaint.
 
 **Request Body**
@@ -68,7 +68,7 @@ If the complaint is successfully registered, the response will be:
       "priority": "number"
     }
   
-###2. GET /complaints
+**2. GET /complaint**
   This endpoint fetches all unresolved complaints (those with status: 'pending').
 
 **Response**
@@ -83,8 +83,8 @@ If the complaint is successfully registered, the response will be:
       "priority": "number"
     }
 
-###3. PUT /complaint/resolve
-This endpoint marks a complaint as resolved.
+**3. PUT /complaint/resolve**
+   This endpoint marks a complaint as resolved.
 
 **Reponse**
 
@@ -99,8 +99,8 @@ This endpoint marks a complaint as resolved.
       "priority": "number"
     }
 
-###4. GET /logs
-This endpoint fetches the daily log of resolved complaints and missed pickups.
+**4. GET /logs**
+   This endpoint fetches the daily log of resolved complaints and missed pickups.
 
 **Response**
 Returns the contents of the daily-log.csv file.
@@ -109,7 +109,7 @@ Returns the contents of the daily-log.csv file.
   123,resolved,2024-11-10T12:00:00Z
   124,pending,2024-11-10T12:05:00Z
 
-##File Handling
+**File Handling**
   The system generates and stores logs in a CSV file (daily-log.csv). Each entry records the complaint ID, status (resolved or pending), and timestamp of the action.
 
 **Log Format**:
@@ -119,7 +119,7 @@ csv
   124,pending,2024-11-10T12:05:00Z
 The status field indicates whether the complaint has been resolved or is still pending.
 
-##Contribution
+**Contribution**
   If you'd like to contribute to this project, follow these steps:
 
 **1. Fork the Repository**
@@ -152,11 +152,9 @@ The status field indicates whether the complaint has been resolved or is still p
 **7. Create a Pull Request**
   Open a pull request from your fork's feature branch to the main repository.
 
-##License
+**License**
   This project is licensed under the MIT License - see the LICENSE file for details.
 
-##Acknowledgments
+**Acknowledgments**
   The project uses Express.js to handle HTTP requests.
   The system utilizes Queues and Stacks to manage and resolve complaints efficiently.
-
-
